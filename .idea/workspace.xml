@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a324e2e4-9475-48fb-af9c-3d1e902fb59c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/counter/Counter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/counter/Counter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,11 +51,23 @@
       <option name="presentableId" value="Default" />
       <updated>1608653335299</updated>
       <workItem from="1608653337069" duration="328000" />
-      <workItem from="1608664122305" duration="636000" />
+      <workItem from="1608664122305" duration="958000" />
     </task>
+    <task id="LOCAL-00001" summary="little fix))">
+      <created>1608664769898</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608664769898</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="little fix))" />
+    <option name="LAST_COMMIT_MESSAGE" value="little fix))" />
   </component>
 </project>

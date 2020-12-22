@@ -7,11 +7,14 @@ export default function Counter() {
     const [counter, setCounter] = useState(0);
     const [valueInput, setValueInput] = useState(0);
 
-    const submit = () =>  multiply(valueInput)
+    const submit = () => {
+        multiply(valueInput)
+        setValueInput(0)
+    }
 
     const multiply = (num) => {
         (counter + num) >= 0
-            ? setCounter(counter + valueInput)
+            ? setCounter(counter + num)
             : setCounter(0)
     }
 
