@@ -1,18 +1,22 @@
 import React, {useState} from 'react';
+import CalcTitle from "./units/calc-title/CalcTitle";
+import CounterResult from "./units/counter-result/CounterResult";
+import CreateButtonUnit from "./units/btn-arr/ButtonUnit";
+import CreateInputArea from "./units/Input-area/InputArea";
 
 export default function Counter() {
 
     const myButtons = [1, -1, 100, -100];
 
     const [counter, setCounter] = useState(0);
-    const [valueInput, setValueInput] = useState(0);
+    const [valueInput, setValueInput] = useState('');
 
     const submit = () => {
-        multiply(valueInput)
-        setValueInput(0)
+        plus(valueInput)
+        setValueInput('')
     }
 
-    const multiply = (num) => {
+    const plus = (num) => {
         (counter + num) >= 0
             ? setCounter(counter + num)
             : setCounter(0)
@@ -20,20 +24,10 @@ export default function Counter() {
 
     return (
             <div>
-                <h1>{counter}</h1>
-                <div>
-                    {myButtons.map(value =>
-                        <button onClick={() => multiply(value)
-                        }> {value}
-                        </button>)}
-                    <button onClick={()=>setCounter(0)} className='btn_reset' >reset</button>
-                </div>
-                <div>
-                    <input type={'number'} onChange={({target: {value}}) => {
-                        setValueInput(+value)
-                    }} className='input' value={valueInput}/>
-                    <button onClick={submit}>Submit</button>
-                </div>
+                <CalcTitle/>
+                <CounterResult counterResult={counter} />
+                <CreateButtonUnit btnArr={myButtons} plusFn={plus} setCounter={setCounter}/>
+                <CreateInputArea submitFn={submit} valueInput={valueInput} setValueInput={setValueInput}/>
             </div>
     );
 }
